@@ -27,6 +27,17 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # IEX::Api.configure do |config|
+  #   config.publishable_token = 'pk_ee230d0fdac54f22a1feb40884a7178a' # defaults to ENV['IEX_API_PUBLISHABLE_TOKEN']
+  #   config.endpoint = 'https://cloud.iexpais.com' # defaults to 'https://cloud.iexapis.com/v1'
+  # end
+
+  client = IEX::Api::Client.new(
+  publishable_token: 'token',
+  endpoint: 'https://sandbox.iexapis.com/v1'
+)
+
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
