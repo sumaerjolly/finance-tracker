@@ -1,4 +1,6 @@
-<%= render 'layouts/messages' %>
+<% if params[:action] == "search" %>
+    <%= render 'layouts/messages' %>
+<% end %>
 <% if @stock %>
     <div class="well results-block">
         <strong>Symbol: </strong><%= @stock.ticker %>
