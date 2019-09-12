@@ -20,4 +20,15 @@ class UsersController < ApplicationController
       format.js { render partial: 'friends/result' }
     end
   end
+
+  def add_friend
+    @friend = User.find(params[:friend])
+    current_user.friendships.build(friend_id: @friend.id)
+    if current_user.save
+      flash[:success] = "#{@friend.full_name} was successfully added"
+    else 
+      flash[:danger] = "There was something wrong with the friend request"
+    end 
+    redirect_to my_friends_path
+  end 
 end
