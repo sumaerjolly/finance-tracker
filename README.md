@@ -1,6 +1,6 @@
 # Stock Tracker App
 
-A simple app that is I built for myself to track stocks using the IEX Finance API Ruby Client. You can view your stock and its current price and add it to your portfolio. I have used bootstrap for the frontend. I plan on adding Active Jobs to update the stock price daily as well. 
+A simple app that I built for myself in order to track stocks using the IEX Finance API Ruby Client. You can view your stocks and their current prices, then add them to your portfolio. I have used bootstrap for the frontend. I plan on adding Active Jobs to update the stock price daily as well.
 
 ## Live version 
 The live version of the app can be found [here](https://finance-tracker-sumaer.herokuapp.com)
